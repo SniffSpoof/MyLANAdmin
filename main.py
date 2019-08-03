@@ -22,13 +22,24 @@ class EthernetTools():
 		res = proc.communicate()  # получить tuple('stdout', 'stderr')
 		if proc.returncode:
     			print res[1]
-		print 'result:', res[0]
+		print ('result:', res[0])
 
-	def traceroute(self):
-		pass
+	def traceroute(self, domenOrIP):
+		command = ["traceroute", "domenOrIP"]
+		proc = Popen(
+    			command,
+    			shell=True,
+    			stdout=PIPE, stderr=PIPE
+		)
+		proc.wait()    # дождаться выполнения
+		res = proc.communicate()  # получить tuple('stdout', 'stderr')
+		if proc.returncode:
+    			print res[1]
+		print ('result:', res[0])
 
 	def PortScan(self):
 		pass
+	
 	def TruePrintInShell(self, text):
 		pass
 
