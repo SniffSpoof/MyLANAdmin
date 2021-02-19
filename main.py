@@ -7,7 +7,7 @@ import subprocess
 menu = "-" * 50 + "Menu" + "-" * 50 + "\n(0)Settings\n(1)MyLAN\n(2)PortScanner\n(3)Ping\n(4)TraceRoute\n(5)RouterControl\n(99)Exit"
 #/constants
 
-class EthernetTools():
+class Tools():
 	def __init__(self):
 		pass
 
@@ -38,10 +38,10 @@ class EthernetTools():
 		print ('result:', res[0])
 
 	def PortScan(self):
-		pass
+		pass #TODO:Write me
 	
 	def TruePrintInShell(self, text):
-		pass
+		pass #TODO:Write me
 
 class ClientPanel():
 	#(0)settings
